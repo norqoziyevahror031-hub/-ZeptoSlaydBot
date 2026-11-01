@@ -1,0 +1,2617 @@
+2026-10-30 21:17:07,990 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 21:17:08,528 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 21:17:28,915 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 21:17:29,430 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 21:18:41,038 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 21:18:41,540 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 21:19:22,783 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 21:19:23,298 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 21:21:58,177 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_handlers\conversationhandler.py", line 841, in handle_update
+    new_state: object = await handler.handle_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        update, application, handler_check_result, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\ZEPTO BOT\handlers.py", line 602, in handle_manual_auto_complete
+    from slide_builder import get_automatic_slide_outline
+ImportError: cannot import name 'get_automatic_slide_outline' from 'slide_builder' (C:\Users\user\Desktop\ZEPTO BOT\slide_builder.py)
+2026-10-30 21:22:26,425 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_handlers\conversationhandler.py", line 841, in handle_update
+    new_state: object = await handler.handle_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        update, application, handler_check_result, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\ZEPTO BOT\handlers.py", line 602, in handle_manual_auto_complete
+    from slide_builder import get_automatic_slide_outline
+ImportError: cannot import name 'get_automatic_slide_outline' from 'slide_builder' (C:\Users\user\Desktop\ZEPTO BOT\slide_builder.py)
+2026-10-30 21:39:15,935 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 21:39:16,465 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 21:40:06,730 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 21:40:07,244 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 22:10:54,929 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 22:10:55,436 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 22:23:06,284 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 22:23:06,828 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 22:26:19,481 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 22:26:19,988 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 22:45:24,181 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 22:45:24,762 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 22:49:51,334 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 22:49:51,874 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 22:52:02,068 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 22:52:02,561 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 22:59:05,309 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 22:59:05,739 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 23:01:39,027 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-30 23:01:39,514 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-10-30 23:01:40,445 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:01:45,073 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:01:46,793 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:01:52,167 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:01:54,529 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:01:58,036 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:02:01,539 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:02:06,902 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:02:12,393 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:02:20,313 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:02:31,433 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:02:36,149 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:02:47,926 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-30 23:02:52,637 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-10-31 16:01:48,405 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-10-31 16:01:48,785 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-11-01 19:27:57,884 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-11-01 19:27:59,022 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-11-01 20:10:51,545 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:10:57,194 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:11:04,484 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:11:13,349 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:11:22,356 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:11:35,464 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:11:51,233 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:12:12,738 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:12:42,845 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:13:17,353 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:13:51,759 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:14:26,120 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:15:00,571 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:15:34,900 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:16:09,223 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:16:43,608 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:17:17,940 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:17:52,404 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:18:27,729 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:19:05,481 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:19:40,596 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:20:14,937 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:20:49,333 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:21:23,758 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:21:58,260 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:22:32,673 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:23:07,017 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:23:41,386 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:24:16,510 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:24:52,759 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:24:58,401 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:25:05,279 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:25:11,598 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:25:18,476 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:25:27,266 - ZeptoSlaydBot - ERROR - Kutilmagan xatolik yuz berdi:
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\ext\_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-01 20:28:42,698 - ZeptoSlaydBot - INFO - Bot ishga tushirilmoqda...
+2026-11-01 20:28:43,385 - ZeptoSlaydBot - INFO - Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!
+2026-11-01 20:28:44,697 - ZeptoSlaydBot - INFO - Bot profili, tavsifi va buyruqlari muvaffaqiyatli yangilandi.

@@ -21,62 +21,46 @@ class Theme:
     is_dark: bool = False
 
 THEMES: Dict[str, Theme] = {
-    "classic": Theme(
-        id="classic",
-        name="🏛 Klassik",
-        short_name="Klassik",
-        description="Oq fon, ko'k sarlavhalar va toza akademik uslub",
+    "ion": Theme(
+        id="ion",
+        name="🏛 Ion (Klassik)",
+        short_name="Ion",
+        description="Oq fon, to'q ko'k sarlavhalar va safir ko'k aksent",
         bg_color=(255, 255, 255),
-        bg_color_end=(240, 244, 250),
-        title_color=(20, 50, 110),        # Deep Classic Navy
+        bg_color_end=(240, 246, 255),
+        title_color=(15, 45, 105),        # Deep Classic Navy
         text_color=(45, 55, 72),          # Dark Slate
-        accent_color=(37, 99, 235),       # Royal Blue
-        card_bg_color=(245, 248, 255),
-        card_border_color=(205, 220, 245),
+        accent_color=(30, 95, 220),       # Sapphire Blue
+        card_bg_color=(246, 250, 255),
+        card_border_color=(205, 222, 248),
         font_heading="Times New Roman",
         font_body="Times New Roman",
         is_dark=False
     ),
-    "modern": Theme(
-        id="modern",
-        name="💎 Zamonaviy",
-        short_name="Zamonaviy",
-        description="To'q ko'k gradient fon, oq va moviy yorug' matn",
-        bg_color=(12, 25, 50),            # Deep Navy
-        bg_color_end=(25, 45, 85),        # Gradient Slate Navy
+    "facet": Theme(
+        id="facet",
+        name="💎 Facet (Zamonaviy)",
+        short_name="Facet",
+        description="To'q ko'k gradient fon, moviy va oq kristall aksentlar",
+        bg_color=(15, 23, 42),            # Midnight Slate
+        bg_color_end=(30, 41, 59),
         title_color=(255, 255, 255),      # Pure White
-        text_color=(210, 225, 245),       # Light Ice Blue
+        text_color=(215, 230, 250),       # Light Ice Blue
         accent_color=(56, 189, 248),      # Cyan Sky
-        card_bg_color=(20, 38, 70),
-        card_border_color=(45, 75, 125),
+        card_bg_color=(24, 34, 60),
+        card_border_color=(51, 65, 85),
         font_heading="Times New Roman",
         font_body="Times New Roman",
         is_dark=True
     ),
-    "minimal": Theme(
-        id="minimal",
-        name="⚪ Minimal",
-        short_name="Minimal",
-        description="Och kulrang fon, qora matn va nozik chiziqlar",
-        bg_color=(245, 247, 250),         # Ultra-light Neutral
-        bg_color_end=(235, 239, 244),
-        title_color=(24, 24, 27),         # Pitch Black/Zinc
-        text_color=(75, 85, 99),          # Cool Gray
-        accent_color=(15, 23, 42),        # Dark Charcoal
-        card_bg_color=(255, 255, 255),
-        card_border_color=(226, 232, 240),
-        font_heading="Times New Roman",
-        font_body="Times New Roman",
-        is_dark=False
-    ),
-    "nature": Theme(
-        id="nature",
-        name="🌿 Yashil tabiat",
-        short_name="Yashil tabiat",
-        description="Yumshoq yashil va zumrad ranglar uyg'unligi",
-        bg_color=(242, 249, 245),         # Soft Mint
-        bg_color_end=(226, 242, 233),
-        title_color=(16, 85, 50),         # Emerald Deep
+    "savon": Theme(
+        id="savon",
+        name="🌿 Savon (Zumrad)",
+        short_name="Savon",
+        description="Nafis zumrad va yalpiz rangli organik tabiat shabloni",
+        bg_color=(244, 250, 246),         # Soft Mint
+        bg_color_end=(230, 244, 235),
+        title_color=(15, 75, 45),         # Emerald Deep
         text_color=(40, 60, 50),          # Forest Slate
         accent_color=(16, 185, 129),      # Vibrant Emerald
         card_bg_color=(255, 255, 255),
@@ -85,42 +69,101 @@ THEMES: Dict[str, Theme] = {
         font_body="Times New Roman",
         is_dark=False
     ),
-    "royal": Theme(
-        id="royal",
-        name="👑 Qizil-oltin",
-        short_name="Qizil-oltin",
-        description="Rasmiy, tantanali uslub, to'q qizil va oltin aksentlar",
-        bg_color=(253, 250, 245),         # Warm Ivory
+    "madison": Theme(
+        id="madison",
+        name="👑 Madison (Qizil-Oltin)",
+        short_name="Madison",
+        description="To'q yoqut, fil suyagi va zarhal oltin aksentlar",
+        bg_color=(254, 251, 246),         # Warm Ivory
         bg_color_end=(248, 240, 230),
-        title_color=(140, 20, 30),        # Royal Crimson
-        text_color=(50, 40, 40),          # Warm Charcoal
+        title_color=(135, 20, 35),        # Royal Crimson
+        text_color=(55, 45, 45),          # Warm Charcoal
         accent_color=(217, 145, 25),      # Gold
         card_bg_color=(255, 255, 255),
-        card_border_color=(235, 205, 160),
+        card_border_color=(235, 210, 175),
         font_heading="Times New Roman",
         font_body="Times New Roman",
         is_dark=False
     ),
-    "dark": Theme(
-        id="dark",
-        name="🌙 Qorong'i rejim",
-        short_name="Qorong'i rejim",
-        description="Qora fon, neon-ko'k va binafsha aksentlar",
-        bg_color=(13, 17, 23),            # Pitch Dark GitHub
-        bg_color_end=(22, 27, 34),
-        title_color=(240, 246, 252),      # Bright Light
-        text_color=(175, 185, 200),       # Muted Gray
-        accent_color=(88, 166, 255),      # Electric Neon Blue
-        card_bg_color=(22, 27, 34),
-        card_border_color=(48, 54, 61),
+    "atlas": Theme(
+        id="atlas",
+        name="⚪ Atlas (Minimal)",
+        short_name="Atlas",
+        description="Ultra-toza Shveysariya uslubi, nozik korall aksent",
+        bg_color=(247, 248, 250),         # Neutral light
+        bg_color_end=(238, 241, 246),
+        title_color=(20, 25, 35),         # Pitch Charcoal
+        text_color=(70, 80, 95),          # Slate Gray
+        accent_color=(235, 87, 87),       # Editorial Coral
+        card_bg_color=(255, 255, 255),
+        card_border_color=(225, 230, 238),
+        font_heading="Times New Roman",
+        font_body="Times New Roman",
+        is_dark=False
+    ),
+    "celestial": Theme(
+        id="celestial",
+        name="🌙 Celestial (Tungi Neon)",
+        short_name="Celestial",
+        description="Obsidian qora fon, neon indigo va kiber texno aksentlar",
+        bg_color=(11, 15, 25),            # Deep Obsidian
+        bg_color_end=(20, 26, 42),
+        title_color=(245, 248, 255),      # Bright Light
+        text_color=(180, 195, 220),       # Muted Gray
+        accent_color=(129, 140, 248),     # Electric Indigo
+        card_bg_color=(18, 23, 38),
+        card_border_color=(45, 55, 85),
         font_heading="Times New Roman",
         font_body="Times New Roman",
         is_dark=True
+    ),
+    "retrospect": Theme(
+        id="retrospect",
+        name="💼 Retrospect (Biznes)",
+        short_name="Retrospect",
+        description="Korporativ po'lat kulrang va firuza aksentli biznes shablon",
+        bg_color=(243, 246, 249),         # Steel Mist
+        bg_color_end=(232, 238, 244),
+        title_color=(25, 45, 65),         # Executive Navy
+        text_color=(50, 65, 80),          # Cool Charcoal
+        accent_color=(13, 148, 136),      # Teal Turquoise
+        card_bg_color=(255, 255, 255),
+        card_border_color=(200, 215, 225),
+        font_heading="Times New Roman",
+        font_body="Times New Roman",
+        is_dark=False
+    ),
+    "studio": Theme(
+        id="studio",
+        name="☀️ Studio (Ijodiy)",
+        short_name="Studio",
+        description="Iliq qahva, terrakotta va kahrabo uyg'unligi",
+        bg_color=(252, 249, 244),         # Warm Linen
+        bg_color_end=(245, 238, 228),
+        title_color=(75, 45, 30),         # Deep Espresso
+        text_color=(65, 55, 50),          # Warm Slate
+        accent_color=(225, 112, 85),      # Terracotta
+        card_bg_color=(255, 255, 255),
+        card_border_color=(232, 215, 198),
+        font_heading="Times New Roman",
+        font_body="Times New Roman",
+        is_dark=False
     )
 }
 
+# Eski nomlar bilan moslashuvchanlik (Backward compatibility)
+THEME_ALIASES: Dict[str, str] = {
+    "classic": "ion",
+    "modern": "facet",
+    "nature": "savon",
+    "royal": "madison",
+    "minimal": "atlas",
+    "dark": "celestial",
+}
+
 def get_theme(theme_id: str) -> Theme:
-    return THEMES.get(theme_id, THEMES["classic"])
+    norm_id = THEME_ALIASES.get(theme_id, theme_id)
+    return THEMES.get(norm_id, THEMES["ion"])
 
 def get_all_themes() -> List[Theme]:
     return list(THEMES.values())
@@ -157,113 +200,117 @@ def generate_preview_image(theme: Theme, output_path: str, width: int = 800, hei
         width=2
     )
 
-    # Shriftlar (Times New Roman, fallback bilan)
+    # Shriftlar
     try:
-        font_title = ImageFont.truetype("timesbd.ttf", 34)
-        font_subtitle = ImageFont.truetype("times.ttf", 20)
-        font_body = ImageFont.truetype("times.ttf", 17)
-        font_badge = ImageFont.truetype("timesbd.ttf", 15)
-        font_footer = ImageFont.truetype("times.ttf", 13)
+        font_title = ImageFont.truetype("timesbd.ttf", 32)
+        font_subtitle = ImageFont.truetype("times.ttf", 19)
+        font_body = ImageFont.truetype("times.ttf", 16)
+        font_badge = ImageFont.truetype("timesbd.ttf", 14)
     except IOError:
-        try:
-            font_title = ImageFont.truetype("arialbd.ttf", 34)
-            font_subtitle = ImageFont.truetype("arial.ttf", 20)
-            font_body = ImageFont.truetype("arial.ttf", 17)
-            font_badge = ImageFont.truetype("arialbd.ttf", 15)
-            font_footer = ImageFont.truetype("arial.ttf", 13)
-        except IOError:
-            font_title = ImageFont.load_default()
-            font_subtitle = ImageFont.load_default()
-            font_body = ImageFont.load_default()
-            font_badge = ImageFont.load_default()
-            font_footer = ImageFont.load_default()
+        font_title = ImageFont.load_default()
+        font_subtitle = ImageFont.load_default()
+        font_body = ImageFont.load_default()
+        font_badge = ImageFont.load_default()
 
     # 4. Shablon badge (teg)
     badge_text = f"  {theme.name}  "
     draw.rounded_rectangle(
-        [pad_x + 30, pad_y + 25, pad_x + 220, pad_y + 55],
+        [pad_x + 30, pad_y + 25, pad_x + 230, pad_y + 55],
         radius=8,
         fill=theme.accent_color
     )
-    badge_text_color = (10, 15, 25) if not theme.is_dark and theme.id != "classic" and theme.id != "royal" else (255, 255, 255)
+    badge_text_color = (10, 15, 25) if not theme.is_dark and theme.id not in ("ion", "madison") else (255, 255, 255)
     draw.text((pad_x + 40, pad_y + 30), badge_text, fill=badge_text_color, font=font_badge)
 
     # 5. Sarlavha namunasi
-    draw.text((pad_x + 30, pad_y + 75), "Taqdimot Sarlavhasi Namunasi", fill=theme.title_color, font=font_title)
-    draw.line([(pad_x + 30, pad_y + 120), (pad_x + 350, pad_y + 120)], fill=theme.accent_color, width=3)
+    draw.text((pad_x + 30, pad_y + 75), "PowerPoint Professional Slayd", fill=theme.title_color, font=font_title)
+    draw.line([(pad_x + 30, pad_y + 118), (pad_x + 360, pad_y + 118)], fill=theme.accent_color, width=3)
 
-    # 6. Qisqa tavsif va punktlar
+    # 6. Mockup 2 qism: Chapda matn, o'ngda rasm infografika
     draw.text((pad_x + 30, pad_y + 135), theme.description, fill=theme.text_color, font=font_subtitle)
 
     bullets = [
-        "• Asosiy ilmiy va akademik ma'lumotlar",
-        "• Chiroyli va tushunarli tartiblangan fikrlar",
-        "• Rasmiy va professional ko'rinishdagi slaydlar"
+        "• Muvozanatli matn va infografika",
+        "• Akademik Times New Roman shrifti",
+        "• PowerPoint mashhur shabloni"
     ]
-    cur_y = pad_y + 180
+    cur_y = pad_y + 175
     for b in bullets:
-        draw.text((pad_x + 35, cur_y), b, fill=theme.text_color, font=font_body)
+        draw.text((pad_x + 30, cur_y), b, fill=theme.text_color, font=font_body)
         cur_y += 32
 
-    # 7. Pastki footer namunasi
-    footer_text = "Universitet nomi • Talaba Ism Familiyasi • 101-guruh • 1/10"
-    draw.line([(pad_x + 30, height - pad_y - 45), (width - pad_x - 30, height - pad_y - 45)], fill=theme.card_border_color, width=1)
-    draw.text((pad_x + 30, height - pad_y - 35), footer_text, fill=theme.text_color, font=font_footer)
+    # O'ng tomonda infografika rasm maketi
+    mock_x1 = width - pad_x - 260
+    mock_y1 = pad_y + 75
+    mock_x2 = width - pad_x - 30
+    mock_y2 = height - pad_y - 30
+    draw.rounded_rectangle(
+        [mock_x1, mock_y1, mock_x2, mock_y2],
+        radius=12,
+        fill=theme.bg_color_end if not theme.is_dark else (28, 38, 64),
+        outline=theme.accent_color,
+        width=2
+    )
+    # Mockup ichida chizmalar
+    draw.rounded_rectangle([mock_x1 + 20, mock_y2 - 60, mock_x1 + 55, mock_y2 - 20], radius=4, fill=theme.accent_color)
+    draw.rounded_rectangle([mock_x1 + 75, mock_y2 - 100, mock_x1 + 110, mock_y2 - 20], radius=4, fill=theme.accent_color)
+    draw.rounded_rectangle([mock_x1 + 130, mock_y2 - 140, mock_x1 + 165, mock_y2 - 20], radius=4, fill=theme.accent_color)
+    draw.rounded_rectangle([mock_x1 + 185, mock_y2 - 80, mock_x1 + 220, mock_y2 - 20], radius=4, fill=theme.accent_color)
 
-    img.save(output_path, "PNG", quality=95)
+    img.save(output_path, "PNG")
     return output_path
 
 def generate_catalog_image(output_path: str) -> str:
     """
-    Barcha 6 ta temani 2 ustun x 3 qatorda bitta chiroyli rasmda birlashtirib ko'rsatadi.
+    8 ta mashhur PowerPoint shablonlarini 4 qator x 2 ustun ko'rinishida
+    birlashtirib bitta to'liq katalog rasm qiladi.
     """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    themes_list = list(THEMES.values())
-    
-    thumb_w, thumb_h = 440, 248
-    margin_x, margin_y = 20, 20
-    header_h = 70
-    
-    total_w = margin_x * 3 + thumb_w * 2
-    total_h = header_h + margin_y * 4 + thumb_h * 3
-    
-    catalog = Image.new("RGB", (total_w, total_h), (240, 243, 246))
-    draw = ImageDraw.Draw(catalog)
+    themes = get_all_themes()
 
-    # Header
+    cols = 2
+    rows = (len(themes) + 1) // 2
+    card_w = 720
+    card_h = 380
+    pad_x = 40
+    pad_y = 40
+    header_h = 130
+
+    total_w = cols * card_w + (cols + 1) * pad_x
+    total_h = header_h + rows * card_h + (rows + 1) * pad_y
+
+    canvas = Image.new("RGB", (total_w, total_h), (245, 247, 250))
+    draw = ImageDraw.Draw(canvas)
+
+    # Sarlavha paneli
+    draw.rectangle([0, 0, total_w, header_h], fill=(15, 23, 42))
+    draw.rectangle([0, header_h - 4, total_w, header_h], fill=(56, 189, 248))
+
     try:
-        font_head = ImageFont.truetype("arialbd.ttf", 26)
-        font_sub = ImageFont.truetype("arial.ttf", 16)
-        font_num = ImageFont.truetype("arialbd.ttf", 18)
+        font_head = ImageFont.truetype("timesbd.ttf", 36)
+        font_sub = ImageFont.truetype("times.ttf", 20)
     except IOError:
         font_head = ImageFont.load_default()
         font_sub = ImageFont.load_default()
-        font_num = ImageFont.load_default()
 
-    draw.rectangle([0, 0, total_w, header_h], fill=(20, 30, 45))
-    draw.text((25, 12), "🎨 Taqdimot Uchun Mavjud 6 Xil Dizayn", fill=(255, 255, 255), font=font_head)
-    draw.text((25, 42), "O'zingizga yoqqan dizaynni quyidagi tugmalar orqali tanlang:", fill=(180, 200, 220), font=font_sub)
+    draw.text((pad_x, 28), "PowerPoint Eng Mashhur Dizayn Shablonlari", fill=(255, 255, 255), font=font_head)
+    draw.text((pad_x, 78), "Quyidagi 8 ta professional dizayndan birini tanlang:", fill=(148, 163, 184), font=font_sub)
 
-    temp_dir = os.path.join(os.path.dirname(output_path), "cache")
+    temp_dir = os.path.join(os.path.dirname(output_path), "theme_cards")
     os.makedirs(temp_dir, exist_ok=True)
 
-    for idx, th in enumerate(themes_list):
-        row = idx // 2
-        col = idx % 2
-        x = margin_x + col * (thumb_w + margin_x)
-        y = header_h + margin_y + row * (thumb_h + margin_y)
+    for idx, th in enumerate(themes):
+        col = idx % cols
+        row = idx // cols
 
-        # Generate single preview and resize
-        t_path = os.path.join(temp_dir, f"{th.id}.png")
-        generate_preview_image(th, t_path, width=800, height=450)
-        t_img = Image.open(t_path)
-        t_thumb = t_img.resize((thumb_w, thumb_h), Image.Resampling.LANCZOS)
-        catalog.paste(t_thumb, (x, y))
+        x = pad_x + col * (card_w + pad_x)
+        y = header_h + pad_y + row * (card_h + pad_y)
 
-        # Add number badge on top-left of each thumb
-        badge_box = [x + 8, y + 8, x + 38, y + 38]
-        draw.rounded_rectangle(badge_box, radius=6, fill=(20, 30, 45), outline=(255, 255, 255), width=2)
-        draw.text((x + 16, y + 12), str(idx + 1), fill=(255, 255, 255), font=font_num)
+        preview_file = os.path.join(temp_dir, f"{th.id}_card.png")
+        generate_preview_image(th, preview_file, width=card_w, height=card_h)
 
-    catalog.save(output_path, "PNG", quality=95)
+        with Image.open(preview_file) as p_img:
+            canvas.paste(p_img, (x, y))
+
+    canvas.save(output_path, "PNG")
     return output_path

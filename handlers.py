@@ -64,19 +64,23 @@ def get_back_cancel_keyboard(show_skip: bool = False, skip_data: str = "btn_skip
     return InlineKeyboardMarkup(buttons)
 
 def get_theme_selection_keyboard() -> InlineKeyboardMarkup:
-    """6 ta dizaynni 2 ustunda ko'rsatuvchi tugmalar."""
+    """8 ta mashhur PowerPoint shablonlari tugmalari."""
     keyboard = [
         [
-            InlineKeyboardButton("🏛 Klassik", callback_data="theme_classic"),
-            InlineKeyboardButton("💎 Zamonaviy", callback_data="theme_modern")
+            InlineKeyboardButton("🏛 Ion (Klassik)", callback_data="theme_ion"),
+            InlineKeyboardButton("💎 Facet (Zamonaviy)", callback_data="theme_facet")
         ],
         [
-            InlineKeyboardButton("⚪ Minimal", callback_data="theme_minimal"),
-            InlineKeyboardButton("🌿 Yashil tabiat", callback_data="theme_nature")
+            InlineKeyboardButton("🌿 Savon (Zumrad)", callback_data="theme_savon"),
+            InlineKeyboardButton("👑 Madison (Qizil-Oltin)", callback_data="theme_madison")
         ],
         [
-            InlineKeyboardButton("👑 Qizil-oltin", callback_data="theme_royal"),
-            InlineKeyboardButton("🌙 Qorong'i rejim", callback_data="theme_dark")
+            InlineKeyboardButton("⚪ Atlas (Minimal)", callback_data="theme_atlas"),
+            InlineKeyboardButton("🌙 Celestial (Tungi Neon)", callback_data="theme_celestial")
+        ],
+        [
+            InlineKeyboardButton("💼 Retrospect (Biznes)", callback_data="theme_retrospect"),
+            InlineKeyboardButton("☀️ Studio (Ijodiy)", callback_data="theme_studio")
         ],
         [
             InlineKeyboardButton("❌ Bekor qilish", callback_data="btn_cancel")
@@ -142,10 +146,15 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
     welcome_text = (
         f"Assalomu alaykum, {first_name}! 👋\n\n"
-        f"Men akademik taqdimotlar (.pptx) tayyorlab beruvchi botman.\n"
-        f"Hech qanday murakkab buyruqlarni o'rganishingiz shart emas — "
-        f"barcha amallar tugmalar orqali qulay va tez bajariladi! 🚀\n\n"
-        f"Boshlash uchun quyidagi tugmani bosing:"
+        f"🎓 <b>ZeptoSlaydBot</b> ga xush kelibsiz!\n"
+        f"Men akademik va professional taqdimotlar (.pptx) tayyorlab beruvchi aqlli botman.\n\n"
+        f"✨ <b>Asosiy imkoniyatlar:</b>\n"
+        f"• <b>8 xil PowerPoint dizaynlari:</b> Ion, Facet, Savon, Madison, Atlas, Celestial, Retrospect, Studio\n"
+        f"• <b>10 ta slaydda roppa-rosa 5 ta rasm:</b> Matnli va rasmli slaydlar navbatma-navbat almashadi\n"
+        f"• <b>Silliq yumaloq burchakli</b> yuqori sifatli tematik fotosuratlar va nozik ramkalar\n"
+        f"• Qat'iy akademik <b>Times New Roman</b> shrifti\n"
+        f"• <b>⚡ Avtomatik to'ldirish:</b> Mavzuni yozsangiz, bot to'liq ilmiy reja va matnlarni o'zi yozib beradi!\n\n"
+        f"Taqdimot yaratishni boshlash uchun quyidagi tugmani bosing:"
     )
 
     keyboard = InlineKeyboardMarkup([
@@ -169,7 +178,7 @@ async def start_creation(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
     # Ma'lumotlarni boshlang'ich holatga keltirish
     context.user_data["pres_data"] = {
-        "theme_id": "classic",
+        "theme_id": "ion",
         "logo_path": None,
         "author_name": "",
         "group_name": "",
@@ -190,7 +199,7 @@ async def start_creation(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     caption = (
         "🎨 <b>1-QADAM: Dizaynni tanlang</b>\n\n"
         "Taqdimotingiz qaysi rang va uslubda bo'lishini xohlaysiz? "
-        "Yuqoridagi namunadan o'zingizga ma'qul dizaynni tanlang:"
+        "PowerPoint'ning eng mashhur 8 ta shablonidan birini tanlang:"
     )
 
     target_msg = query.message if query else update.message
@@ -470,8 +479,8 @@ async def handle_fill_auto(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             f"📌 <b>Mavzu:</b> {data['topic']}\n"
             f"🎨 <b>Dizayn:</b> {theme.name}\n"
             f"📊 <b>Slaydlar:</b> {data['slide_count']} ta\n"
-            f"🖼 <b>Rasmlar:</b> Har slaydda 4 tadan mavzuga oid rasm (2x2)\n"
-            f"📝 <b>Matn:</b> Har slaydda 80-120 so'z (Times New Roman)\n"
+            f"🖼 <b>Tuzilishi:</b> Matnli va yarim-rasmli muvozanatli slaydlar\n"
+            f"📝 <b>Matn:</b> Har slaydda boyitilgan matn (Times New Roman)\n"
             f"👤 <b>Bajardi:</b> {data['author_name']}\n"
             f"🏫 <b>Guruh:</b> {data['group_name']}\n\n"
             f"<i>Faylni yuklab olib, bemalol tahrirlashingiz yoki namoyish etishingiz mumkin.</i>"
@@ -654,8 +663,8 @@ async def _generate_and_send_manual(update: Update, context: ContextTypes.DEFAUL
             f"📌 <b>Mavzu:</b> {data['topic']}\n"
             f"🎨 <b>Dizayn:</b> {theme.name}\n"
             f"📊 <b>Slaydlar:</b> {len(data['manual_slides']) + 1} ta\n"
-            f"🖼 <b>Rasmlar:</b> Har slaydda 4 tadan mavzuga oid rasm (2x2)\n"
-            f"📝 <b>Matn:</b> Har slaydda 80-120 so'z (Times New Roman)\n"
+            f"🖼 <b>Tuzilishi:</b> Matnli va yarim-rasmli muvozanatli slaydlar\n"
+            f"📝 <b>Matn:</b> Har slaydda boyitilgan matn (Times New Roman)\n"
             f"👤 <b>Bajardi:</b> {data['author_name']}\n"
             f"🏫 <b>Guruh:</b> {data['group_name']}"
         )
@@ -776,8 +785,8 @@ async def handle_retheme_selection(update: Update, context: ContextTypes.DEFAULT
             f"📌 <b>Mavzu:</b> {data['topic']}\n"
             f"🎨 <b>Yangi Dizayn:</b> {theme.name}\n"
             f"📊 <b>Slaydlar:</b> {data['slide_count']} ta\n"
-            f"🖼 <b>Rasmlar:</b> Har slaydda 4 tadan mavzuga oid rasm (2x2)\n"
-            f"📝 <b>Matn:</b> Har slaydda 80-120 so'z (Times New Roman)\n"
+            f"🖼 <b>Tuzilishi:</b> Matnli va yarim-rasmli muvozanatli slaydlar\n"
+            f"📝 <b>Matn:</b> Har slaydda boyitilgan matn (Times New Roman)\n"
             f"👤 <b>Bajardi:</b> {data['author_name']}\n"
             f"🏫 <b>Guruh:</b> {data['group_name']}"
         )

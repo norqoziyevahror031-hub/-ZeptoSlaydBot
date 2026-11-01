@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  zepto-bot:
+    build: .
+    container_name: zepto_slayd_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./assets:/app/assets
+      - ./bot.log:/app/bot.log
