@@ -1,12 +1,16 @@
 import os
+import html
 import logging
 from typing import Dict, Any
 
 from telegram import (
     Update,
     InlineKeyboardMarkup,
-    InlineKeyboardButton
+    InlineKeyboardButton,
+    ReplyKeyboardMarkup,
+    KeyboardButton
 )
+import database
 from telegram.ext import (
     ContextTypes,
     ConversationHandler,
@@ -122,6 +126,16 @@ def get_fill_mode_keyboard() -> InlineKeyboardMarkup:
     ]
     return InlineKeyboardMarkup(keyboard)
 
+def get_main_reply_keyboard() -> ReplyKeyboardMarkup:
+    """Pastdagi doimiy bosh menyu tugmalari (Reply Keyboard)."""
+    keyboard = [
+        [KeyboardButton("📊 Yangi taqdimot yaratish")],
+        [KeyboardButton("📑 AUDIT (mustaqil ish)"), KeyboardButton("🎓 DIREKTOR.UZ (sertifikat)")],
+        [KeyboardButton("💰 Balans"), KeyboardButton("💳 Hisobni to'ldirish")]
+    ]
+    return ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+
+
 def get_finish_keyboard() -> InlineKeyboardMarkup:
     """Taqdimot tayyor bo'lgandan keyingi harakatlar."""
     keyboard = [
@@ -140,41 +154,579 @@ def get_finish_keyboard() -> InlineKeyboardMarkup:
 # ==========================================
 
 async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    """1. /start bosilganda kutib olish va 'Yangi taqdimot' tugmasi."""
+    """1. /start bosilganda kutib olish, pastki doimiy menyu va balans ma'lumotlari."""
     user = update.effective_user
-    first_name = user.first_name if user else "Talaba"
+    first_name = html.escape(user.first_name) if user and user.first_name else "Talaba"
+    logger.info(f"Foydalanuvchi /start yubordi: {user.id if user else 'Unknown'} ({user.full_name if user else ''})")
+
+    # Foydalanuvchini bazada ro'yxatga olish / yangilash (yangi foydalanuvchiga 15 000 so'm / 3 ta bepul taqdimot)
+    db_user = database.get_or_create_user(user.id, user.username, user.full_name) if user else {}
+    balance = db_user.get("balance", 0)
+    available_slides = balance // 5000
 
     welcome_text = (
         f"Assalomu alaykum, {first_name}! 👋\n\n"
         f"🎓 <b>ZeptoSlaydBot</b> ga xush kelibsiz!\n"
         f"Men akademik va professional taqdimotlar (.pptx) tayyorlab beruvchi aqlli botman.\n\n"
+        f"💰 <b>Sizning balansingiz:</b> <b>{balance:,} so'm</b> ({available_slides} ta taqdimot)\n"
+        f"🎁 <i>Yangi foydalanuvchilar uchun 3 ta bepul taqdimot (15 000 so'm) taqdim etiladi!</i>\n\n"
         f"✨ <b>Asosiy imkoniyatlar:</b>\n"
         f"• <b>8 xil PowerPoint dizaynlari:</b> Ion, Facet, Savon, Madison, Atlas, Celestial, Retrospect, Studio\n"
         f"• <b>10 ta slaydda roppa-rosa 5 ta rasm:</b> Matnli va rasmli slaydlar navbatma-navbat almashadi\n"
-        f"• <b>Silliq yumaloq burchakli</b> yuqori sifatli tematik fotosuratlar va nozik ramkalar\n"
+        f"• <b>Silliq yumaloq burchakli</b> yuqori sifatli fotosuratlar va nozik ramkalar\n"
         f"• Qat'iy akademik <b>Times New Roman</b> shrifti\n"
         f"• <b>⚡ Avtomatik to'ldirish:</b> Mavzuni yozsangiz, bot to'liq ilmiy reja va matnlarni o'zi yozib beradi!\n\n"
-        f"Taqdimot yaratishni boshlash uchun quyidagi tugmani bosing:"
+        f"Boshlash uchun quyidagi tugmalardan birini tanlang:"
     )
 
-    keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("📊 Yangi taqdimot yaratish", callback_data="start_creation")]
+    inline_keyboard = InlineKeyboardMarkup([
+        [InlineKeyboardButton("📊 Yangi taqdimot yaratish", callback_data="start_creation")],
+        [
+            InlineKeyboardButton("💰 Balans", callback_data="btn_show_balance"),
+            InlineKeyboardButton("💳 Hisobni to'ldirish", callback_data="btn_pay_start")
+        ]
     ])
 
     if update.callback_query:
         await update.callback_query.answer()
-        await update.callback_query.message.reply_text(welcome_text, reply_markup=keyboard)
-    else:
-        await update.message.reply_text(welcome_text, reply_markup=keyboard)
+
+    msg = update.effective_message
+    if msg:
+        await msg.reply_text(
+            welcome_text,
+            reply_markup=get_main_reply_keyboard(),
+            parse_mode="HTML"
+        )
 
     return ConversationHandler.END
 
 
+async def handle_balance_button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Pastdagi '💰 Balans' tugmasi bosilganda."""
+    user = update.effective_user
+    logger.info(f"Foydalanuvchi Balansni so'radi: {user.id if user else 'Unknown'} ({user.full_name if user else ''})")
+    db_user = database.get_or_create_user(user.id, user.username, user.full_name) if user else {}
+    balance = db_user.get("balance", 0)
+    available_slides = balance // 5000
+    user_name = html.escape(user.full_name) if user and user.full_name else "Foydalanuvchi"
+
+    text = (
+        f"👤 <b>Foydalanuvchi:</b> {user_name}\n"
+        f"🆔 <b>Sizning ID:</b> <code>{user.id if user else ''}</code>\n\n"
+        f"💰 <b>Mavjud balans:</b> <b>{balance:,} so'm</b> ({available_slides} ta taqdimot)\n\n"
+        f"<i>1 ta to'liq taqdimot narxi: 5 000 so'm.</i>\n"
+        f"<i>🎁 Har bir yangi foydalanuvchiga 3 ta bepul taqdimot sovg'a qilingan!</i>\n\n"
+        f"Hisobingizni to'ldirish uchun pastdagi <b>«💳 Hisobni to'ldirish»</b> tugmasini bosing:"
+    )
+    keyboard = InlineKeyboardMarkup([
+        [InlineKeyboardButton("💳 Hisobni to'ldirish", callback_data="btn_pay_start")]
+    ])
+    msg = update.effective_message
+    if msg:
+        await msg.reply_text(text, parse_mode="HTML", reply_markup=keyboard)
+
+
+async def handle_payment_request(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """'💳 Hisobni to'ldirish' bosilganda karta ma'lumotlarini berish va chek so'rash."""
+    context.user_data["waiting_for_payment_receipt"] = True
+    card_number = os.getenv("CARD_NUMBER", "5614682115402218")
+    card_owner = os.getenv("CARD_OWNER", "Norqoziyev Ahrorbek")
+    price = "5 000"
+
+    text = (
+        f"💳 <b>Hisobni to'ldirish uchun to'lov qiling:</b>\n\n"
+        f"Karta raqami: <code>{card_number}</code>\n"
+        f"Egasi: <b>{card_owner}</b>\n"
+        f"1 ta taqdimot narxi: <b>{price} so'm</b>\n\n"
+        f"<i>To'lovni amalga oshirgach, to'lov cheki (skrinshot)ni shu yerga rasm sifatida yuboring.</i>\n"
+        f"<i>Chek adminga yuboriladi va to'lovingiz tez fursatda hisobingizga qo'shiladi!</i>"
+    )
+
+    if update.callback_query:
+        await update.callback_query.answer()
+        await update.callback_query.message.reply_text(text, parse_mode="HTML")
+    elif update.message:
+        await update.message.reply_text(text, parse_mode="HTML")
+
+
+async def handle_audit_service(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """📑 AUDIT (mustaqil ish) xizmati haqida ma'lumot va buyurtma berish."""
+    user = update.effective_user
+    logger.info(f"Foydalanuvchi AUDIT xizmatini tanladi: {user.id} ({user.full_name})")
+    db_user = database.get_or_create_user(user.id, user.username, user.full_name)
+    balance = db_user.get("balance", 0)
+    price = 59000
+
+    text = (
+        "📑 <b>AUDIT (Mustaqil ish) xizmati</b>\n\n"
+        "Professional darajada, barcha oliygoh talablariga to'liq mos keladigan mustaqil ish, referat, kurs ishi yoki hisobot tayyorlab berish xizmati.\n\n"
+        "✨ <b>Xizmat afzalliklari:</b>\n"
+        "• To'liq ilmiy va professional matn\n"
+        "• Barcha qoidalarga mos rasmiylashtirish (mundarija, kirish, asosiy boblar, xulosa, foydalanilgan adabiyotlar)\n"
+        "• Antiplagiatdan kafolatli o'tish\n"
+        "• Qisqa muddatda sifatli va tayyor holda topshirish\n\n"
+        f"💵 <b>Xizmat narxi:</b> <b>59 000 so'm</b>\n"
+        f"💰 <b>Sizning balansingiz:</b> <b>{balance:,} so'm</b>\n\n"
+    )
+
+    buttons = []
+    if balance >= price:
+        text += "✅ Balansingizda ushbu xizmat uchun yetarli mablag' mavjud! Buyurtma berish uchun quyidagi tugmani bosing:"
+        buttons.append([InlineKeyboardButton("🛒 Buyurtma berish (59 000 so'm)", callback_data="order_service_audit")])
+    else:
+        diff = price - balance
+        text += (
+            f"⚠️ Buyurtma berish uchun hisobingizda yana <b>{diff:,} so'm</b> yetishmayapti.\n"
+            "Iltimos, hisobingizni to'ldiring yoki to'g'ridan-to'g'ri administratorga murojaat qiling:"
+        )
+        buttons.append([InlineKeyboardButton("💳 Hisobni to'ldirish", callback_data="btn_pay_start")])
+
+    buttons.append([InlineKeyboardButton("👨‍💼 Administratorga yozish", url="https://t.me/ZeptoSlayd")])
+    keyboard = InlineKeyboardMarkup(buttons)
+
+    if update.callback_query:
+        await update.callback_query.answer()
+        await update.callback_query.message.reply_text(text, parse_mode="HTML", reply_markup=keyboard)
+    elif update.message:
+        await update.message.reply_text(text, parse_mode="HTML", reply_markup=keyboard)
+
+
+async def handle_direktor_service(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """🎓 DIREKTOR.UZ (sertifikat) xizmati haqida ma'lumot va buyurtma berish."""
+    user = update.effective_user
+    logger.info(f"Foydalanuvchi DIREKTOR.UZ xizmatini tanladi: {user.id} ({user.full_name})")
+    db_user = database.get_or_create_user(user.id, user.username, user.full_name)
+    balance = db_user.get("balance", 0)
+    price = 159000
+
+    text = (
+        "🎓 <b>DIREKTOR.UZ (Sertifikat) xizmati</b>\n\n"
+        "Direktor.uz milliy platformasi orqali rasmiy malaka sertifikatini olish, test sinovlari va talablarni muvaffaqiyatli topshirishda kafolatlangan professional yordam.\n\n"
+        "✨ <b>Xizmat afzalliklari:</b>\n"
+        "• 100% ishonchli va kafolatlangan natija\n"
+        "• Qisqa vaqt ichida sertifikatni rasmiylashtirish\n"
+        "• Rasmiy tasdiqlangan davlat darajasidagi sertifikatga ega bo'lish\n\n"
+        f"💵 <b>Xizmat narxi:</b> <b>159 000 so'm</b>\n"
+        f"💰 <b>Sizning balansingiz:</b> <b>{balance:,} so'm</b>\n\n"
+    )
+
+    buttons = []
+    if balance >= price:
+        text += "✅ Balansingizda ushbu xizmat uchun yetarli mablag' mavjud! Buyurtma berish uchun quyidagi tugmani bosing:"
+        buttons.append([InlineKeyboardButton("🛒 Buyurtma berish (159 000 so'm)", callback_data="order_service_direktor")])
+    else:
+        diff = price - balance
+        text += (
+            f"⚠️ Buyurtma berish uchun hisobingizda yana <b>{diff:,} so'm</b> yetishmayapti.\n"
+            "Iltimos, hisobingizni to'ldiring yoki to'g'ridan-to'g'ri administratorga murojaat qiling:"
+        )
+        buttons.append([InlineKeyboardButton("💳 Hisobni to'ldirish", callback_data="btn_pay_start")])
+
+    buttons.append([InlineKeyboardButton("👨‍💼 Administratorga yozish", url="https://t.me/ZeptoSlayd")])
+    keyboard = InlineKeyboardMarkup(buttons)
+
+    if update.callback_query:
+        await update.callback_query.answer()
+        await update.callback_query.message.reply_text(text, parse_mode="HTML", reply_markup=keyboard)
+    elif update.message:
+        await update.message.reply_text(text, parse_mode="HTML", reply_markup=keyboard)
+
+
+async def handle_order_service_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Foydalanuvchi xizmatga buyurtma berganda balansdan yechish va adminga xabar yuborish."""
+    query = update.callback_query
+    await query.answer()
+    user = update.effective_user
+    data = query.data
+
+    is_audit = "audit" in data
+    service_name = "AUDIT (Mustaqil ish)" if is_audit else "DIREKTOR.UZ (Sertifikat)"
+    price = 59000 if is_audit else 159000
+
+    bal = database.get_balance(user.id)
+    if bal < price:
+        await query.message.reply_text(
+            f"⚠️ Balansingizda mablag' yetarli emas. Xizmat narxi: <b>{price:,} so'm</b>, sizda: <b>{bal:,} so'm</b>.",
+            parse_mode="HTML"
+        )
+        return
+
+    # Balansdan yechish
+    database.deduct_balance(user.id, price)
+    new_bal = database.get_balance(user.id)
+    avail_slides = new_bal // 5000
+
+    await query.message.reply_text(
+        f"✅ <b>Buyurtmangiz muvaffaqiyatli qabul qilindi!</b>\n\n"
+        f"📌 <b>Tanlangan xizmat:</b> {service_name}\n"
+        f"💵 <b>To'langan summa:</b> <b>{price:,} so'm</b>\n"
+        f"💰 <b>Qolgan balansingiz:</b> <b>{new_bal:,} so'm</b> ({avail_slides} ta taqdimot)\n\n"
+        f"Batafsil ma'lumot olish yoki topshiriq mavzusini yuborish uchun administrator bilan bog'laning: @ZeptoSlayd",
+        parse_mode="HTML",
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton("👨‍💼 Administratorga yozish", url="https://t.me/ZeptoSlayd")]
+        ])
+    )
+
+    # Adminga buyurtma haqida ma'lumot yuborish
+    admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+    if admin_id:
+        try:
+            admin_msg = (
+                f"🚨 <b>YANGI XIZMAT BUYURTMASI KELDI!</b>\n\n"
+                f"📌 <b>Xizmat:</b> {service_name}\n"
+                f"💵 <b>Summa:</b> {price:,} so'm (balansdan yechildi)\n\n"
+                f"👤 <b>Mijoz:</b> {user.full_name}\n"
+                f"🆔 <b>ID:</b> <code>{user.id}</code>\n"
+                f"Username: @{user.username or 'yo\'q'}\n"
+            )
+            await context.bot.send_message(
+                chat_id=int(admin_id),
+                text=admin_msg,
+                parse_mode="HTML"
+            )
+        except Exception as e:
+            logger.error(f"Adminga buyurtma xabari yuborishda xatolik: {e}")
+
+
+async def handle_photo_receipt(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Foydalanuvchi to'lov cheki (rasm) yuborganda uni adminga tasdiqlash uchun yuborish."""
+    user = update.effective_user
+    if not update.message or not update.message.photo:
+        return
+
+    photo = update.message.photo[-1]
+    photo_file_id = photo.file_id
+    context.user_data["waiting_for_payment_receipt"] = False
+
+    payment_id = database.create_payment(user.id, photo_file_id, 5000)
+
+    await update.message.reply_text(
+        "✅ <b>To'lov chekingiz qabul qilindi!</b>\n\n"
+        "Chek administratorga tekshirish uchun yuborildi. "
+        "To'lovingiz tasdiqlanishi bilan hisobingiz to'ldiriladi va sizga bildirishnoma keladi. ⏳",
+        parse_mode="HTML",
+        reply_markup=get_main_reply_keyboard()
+    )
+
+    # Adminga yuborish
+    admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+    if admin_id:
+        try:
+            admin_text = (
+                f"🔔 <b>YANGI TO'LOV CHEKI KELDI!</b>\n\n"
+                f"👤 <b>Foydalanuvchi:</b> {user.full_name}\n"
+                f"🆔 <b>ID:</b> <code>{user.id}</code>\n"
+                f"Username: @{user.username or 'yo\'q'}\n"
+                f"To'lov kodi: #{payment_id}\n\n"
+                f"Tasdiqlash uchun summani tanlang:"
+            )
+            keyboard = InlineKeyboardMarkup([
+                [
+                    InlineKeyboardButton("✅ +5 000", callback_data=f"pay_approve_{payment_id}_5000"),
+                    InlineKeyboardButton("✅ +10 000", callback_data=f"pay_approve_{payment_id}_10000"),
+                    InlineKeyboardButton("✅ +15 000", callback_data=f"pay_approve_{payment_id}_15000")
+                ],
+                [
+                    InlineKeyboardButton("✅ +30 000", callback_data=f"pay_approve_{payment_id}_30000"),
+                    InlineKeyboardButton("✅ +50 000", callback_data=f"pay_approve_{payment_id}_50000"),
+                    InlineKeyboardButton("✅ +59 000 (Audit)", callback_data=f"pay_approve_{payment_id}_59000")
+                ],
+                [
+                    InlineKeyboardButton("✅ +159 000 (Direktor)", callback_data=f"pay_approve_{payment_id}_159000"),
+                    InlineKeyboardButton("✏️ Boshqa summa kiritish", callback_data=f"pay_custom_{payment_id}")
+                ],
+                [
+                    InlineKeyboardButton("❌ Rad etish", callback_data=f"pay_reject_{payment_id}")
+                ]
+            ])
+            await context.bot.send_photo(
+                chat_id=int(admin_id),
+                photo=photo_file_id,
+                caption=admin_text,
+                parse_mode="HTML",
+                reply_markup=keyboard
+            )
+            logger.info(f"To'lov #{payment_id} adminga ({admin_id}) yuborildi.")
+        except Exception as e:
+            logger.error(f"Adminga to'lov chekini yuborishda xatolik: {e}")
+    else:
+        logger.warning(f"ADMIN_ID aniqlanmagan! To'lov #{payment_id} saqlandi, lekin adminga yuborilmadi.")
+
+
+async def handle_payment_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Admin tomonidan to'lovni tasdiqlash yoki rad etish."""
+    query = update.callback_query
+    await query.answer()
+    data = query.data
+
+    if data.startswith("pay_approve_"):
+        parts = data.split("_")
+        pay_id = int(parts[2])
+        amount = int(parts[3]) if len(parts) > 3 else 5000
+        target_user_id = database.approve_payment(pay_id, amount)
+        if target_user_id:
+            new_bal = database.get_balance(target_user_id)
+            avail = new_bal // 5000
+            await query.edit_message_caption(
+                caption=(
+                    f"✅ <b>TO'LOV TASDIQLANDI!</b>\n\n"
+                    f"Foydalanuvchi: ID <code>{target_user_id}</code>\n"
+                    f"Hisobiga: <b>+{amount:,} so'm</b> qo'shildi.\n"
+                    f"Mavjud balansi: <b>{new_bal:,} so'm</b> ({avail} ta taqdimot)."
+                ),
+                parse_mode="HTML"
+            )
+            try:
+                await context.bot.send_message(
+                    chat_id=target_user_id,
+                    text=(
+                        "🎉 <b>To'lovingiz tasdiqlandi!</b>\n\n"
+                        f"Hisobingizga <b>+{amount:,} so'm</b> qo'shildi. "
+                        f"Hozirgi balansingiz: <b>{new_bal:,} so'm</b> ({avail} ta taqdimot).\n\n"
+                        "Endi pastdagi <b>«📊 Yangi taqdimot yaratish»</b> tugmasini bosib taqdimot yaratishingiz mumkin! 🚀"
+                    ),
+                    parse_mode="HTML",
+                    reply_markup=get_main_reply_keyboard()
+                )
+            except Exception as e:
+                logger.warning(f"Foydalanuvchiga tasdiqlash xabari yuborilmadi: {e}")
+        else:
+            await query.message.reply_text("⚠️ Ushbu to'lov cheki allaqachon ko'rib chiqilgan.")
+
+    elif data.startswith("pay_custom_"):
+        pay_id = int(data.replace("pay_custom_", ""))
+        context.user_data["admin_custom_pay_id"] = pay_id
+        await query.message.reply_text(
+            f"✍️ <b>#{pay_id}-sonli to'lov uchun summani kiriting:</b>\n\n"
+            f"Ixtiyoriy summani (masalan: <code>30000</code> yoki <code>50000</code>) shunchaki raqam shaklida yozib yuboring:",
+            parse_mode="HTML"
+        )
+
+    elif data.startswith("pay_reject_"):
+        pay_id = int(data.replace("pay_reject_", ""))
+        target_user_id = database.reject_payment(pay_id)
+        if target_user_id:
+            await query.edit_message_caption(
+                caption=f"❌ <b>TO'LOV RAD ETILDI!</b>\n\nFoydalanuvchi: ID <code>{target_user_id}</code>",
+                parse_mode="HTML"
+            )
+            try:
+                await context.bot.send_message(
+                    chat_id=target_user_id,
+                    text=(
+                        "❌ <b>Kechirasiz, to'lov chekingiz tasdiqlanmadi.</b>\n\n"
+                        "Iltimos, to'lov ma'lumotlarini tekshirib, qaytadan to'g'ri chekni yuboring yoki administratorga murojaat qiling."
+                    ),
+                    parse_mode="HTML",
+                    reply_markup=get_main_reply_keyboard()
+                )
+            except Exception as e:
+                logger.warning(f"Foydalanuvchiga rad xabari yuborilmadi: {e}")
+        else:
+            await query.message.reply_text("⚠️ Ushbu to'lov cheki allaqachon ko'rib chiqilgan.")
+
+
+async def handle_admin_text_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Admin to'lov summasini qo'lda raqam qilib yozganda (masalan: 30000, 50000 va h.k.)."""
+    user = update.effective_user
+    if not update.message or not update.message.text:
+        return
+
+    admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+    if not admin_id or str(user.id) != str(admin_id):
+        return
+
+    text = update.message.text.strip().replace(" ", "").replace("so'm", "").replace("som", "").replace(",", "")
+    if not text.isdigit():
+        return
+
+    amount = int(text)
+    if amount <= 0:
+        return
+
+    pay_id = context.user_data.get("admin_custom_pay_id")
+    
+    # Agar admin chek xabariga reply qilgan bo'lsa
+    if not pay_id and update.message.reply_to_message:
+        reply = update.message.reply_to_message
+        caption = reply.caption or reply.text or ""
+        if "To'lov kodi: #" in caption:
+            try:
+                code_part = caption.split("To'lov kodi: #")[1].split()[0].replace("\n", "")
+                pay_id = int(code_part)
+            except Exception:
+                pass
+
+    # Agar hali ham aniqlanmagan bo'lsa, eng oxirgi kutilayotgan (pending) to'lovni olamiz
+    if not pay_id:
+        with database.get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT id FROM payments WHERE status = 'pending' ORDER BY id DESC LIMIT 1")
+            row = cursor.fetchone()
+            if row:
+                pay_id = row["id"]
+
+    if not pay_id:
+        # Hech qanday to'lov kutilmayotgan bo'lsa, xalaqit bermaymiz
+        return
+
+    # Kutilayotgan holatni tozalaymiz
+    context.user_data.pop("admin_custom_pay_id", None)
+
+    # To'lovni tasdiqlash
+    target_user_id = database.approve_payment(pay_id, amount)
+    if target_user_id:
+        new_bal = database.get_balance(target_user_id)
+        avail = new_bal // 5000
+        await update.message.reply_text(
+            f"✅ <b>TO'LOV TASDIQLANDI!</b>\n\n"
+            f"To'lov kodi: #{pay_id}\n"
+            f"Foydalanuvchi: ID <code>{target_user_id}</code>\n"
+            f"Hisobiga qo'shildi: <b>+{amount:,} so'm</b>\n"
+            f"Mavjud balansi: <b>{new_bal:,} so'm</b> ({avail} ta taqdimot).",
+            parse_mode="HTML"
+        )
+        try:
+            await context.bot.send_message(
+                chat_id=target_user_id,
+                text=(
+                    "🎉 <b>To'lovingiz tasdiqlandi!</b>\n\n"
+                    f"Hisobingizga <b>+{amount:,} so'm</b> qo'shildi. "
+                    f"Hozirgi balansingiz: <b>{new_bal:,} so'm</b> ({avail} ta taqdimot).\n\n"
+                    "Endi botdan bemalol taqdimot yoki xizmatlarga buyurtma berishingiz mumkin! 🚀"
+                ),
+                parse_mode="HTML",
+                reply_markup=get_main_reply_keyboard()
+            )
+        except Exception as e:
+            logger.warning(f"Foydalanuvchiga tasdiqlash xabari yuborilmadi: {e}")
+    else:
+        await update.message.reply_text(f"⚠️ #{pay_id}-sonli to'lov allaqachon ko'rib chiqilgan yoki topilmadi.")
+
+
+async def cmd_myid(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Foydalanuvchining shaxsiy Telegram ID sini ko'rsatish."""
+    user = update.effective_user
+    await update.message.reply_text(
+        f"🆔 <b>Sizning Telegram ID raqamingiz:</b> <code>{user.id}</code>\n"
+        f"👤 <b>Ism:</b> {user.full_name}",
+        parse_mode="HTML"
+    )
+
+
+async def cmd_setadmin(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Bot yaratuvchisi o'zini admin qilib tayinlashi."""
+    user = update.effective_user
+    current_admin = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+    if not current_admin:
+        database.set_setting("admin_id", str(user.id))
+        database.add_balance(user.id, 500000)
+        await update.message.reply_text(
+            f"👑 <b>Tabriklaymiz! Siz bot administratori sifatida tayinlandingiz!</b>\n\n"
+            f"ID: <code>{user.id}</code>\n"
+            f"Barcha to'lov cheklari endi to'g'ridan-to'g'ri sizga keladi.\n"
+            f"Hisobingizga erkin test uchun 500 000 so'm (100 ta taqdimot) balansi biriktirildi.",
+            parse_mode="HTML"
+        )
+    elif str(current_admin) == str(user.id):
+        await update.message.reply_text(f"👑 Siz allaqachon bot administratorisiz (ID: <code>{user.id}</code>).", parse_mode="HTML")
+    else:
+        await update.message.reply_text("⛔ Administrator allaqachon tayinlangan.", parse_mode="HTML")
+
+
+async def cmd_admin(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Administrator paneli."""
+    user = update.effective_user
+    admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+    if not admin_id:
+        await update.message.reply_text(
+            "⚠️ Administrator hali belgilanmagan.\n"
+            "O'zingizni admin qilish uchun /setadmin buyrug'ini bosing.",
+            parse_mode="HTML"
+        )
+        return
+
+    if str(user.id) != str(admin_id):
+        await update.message.reply_text("⛔ Siz bot administratori emassiz.")
+        return
+
+    user_count = database.get_users_count()
+    card_number = os.getenv("CARD_NUMBER", "5614682115402218")
+    card_owner = os.getenv("CARD_OWNER", "Norqoziyev Ahrorbek")
+
+    text = (
+        f"👑 <b>ADMINISTRATOR BOSHQARUV PANELI</b>\n\n"
+        f"👥 <b>Jami foydalanuvchilar:</b> {user_count} nafar\n"
+        f"💵 <b>1 ta slayd narxi:</b> 5 000 so'm\n"
+        f"💳 <b>Karta:</b> <code>{card_number}</code> ({card_owner})\n\n"
+        f"<b>Buyruqlar:</b>\n"
+        f"• <code>/addbalance &lt;user_id&gt; &lt;summa&gt;</code> — Foydalanuvchiga pul balansi qo'shish\n"
+        f"<i>(Masalan: /addbalance {user.id} 15000)</i>"
+    )
+    await update.message.reply_text(text, parse_mode="HTML")
+
+
+async def cmd_addbalance(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Adminga ixtiyoriy foydalanuvchiga balans qo'shish imkoniyati."""
+    user = update.effective_user
+    admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+    if not admin_id or str(user.id) != str(admin_id):
+        await update.message.reply_text("⛔ Bu buyruq faqat administrator uchun.")
+        return
+
+    args = context.args
+    if len(args) < 2:
+        await update.message.reply_text("Format: <code>/addbalance &lt;user_id&gt; &lt;summa_so'mda&gt;</code>\nMasalan: <code>/addbalance 1234567 15000</code>", parse_mode="HTML")
+        return
+
+    try:
+        target_uid = int(args[0])
+        amount = int(args[1])
+        new_b = database.add_balance(target_uid, amount)
+        avail = new_b // 5000
+        await update.message.reply_text(
+            f"✅ Foydalanuvchi (ID: <code>{target_uid}</code>) balansiga <b>+{amount:,} so'm</b> qo'shildi.\nJami balansi: <b>{new_b:,} so'm</b> ({avail} ta taqdimot).",
+            parse_mode="HTML"
+        )
+        try:
+            await context.bot.send_message(
+                chat_id=target_uid,
+                text=f"🎁 <b>Administrator hisobingizga +{amount:,} so'm qo'shdi!</b>\nHozirgi balansingiz: <b>{new_b:,} so'm</b> ({avail} ta taqdimot).",
+                parse_mode="HTML",
+                reply_markup=get_main_reply_keyboard()
+            )
+        except Exception:
+            pass
+    except Exception as e:
+        await update.message.reply_text(f"Xatolik: {e}")
+
+
 async def start_creation(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    """2. Dizayn tanlash bosqichiga o'tish."""
+    """2. Dizayn tanlash bosqichiga o'tish (Balans tekshiruvi bilan)."""
     query = update.callback_query
     if query:
         await query.answer()
+
+    user = update.effective_user
+    admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+    is_admin = bool(admin_id and str(user.id) == str(admin_id))
+
+    bal = database.get_balance(user.id)
+    if bal < 5000 and not is_admin:
+        text = (
+            "⚠️ <b>Hisobingizda yetarli mablag' mavjud emas!</b>\n\n"
+            f"💰 Sizning balansingiz: <b>{bal:,} so'm</b>\n"
+            f"1 ta akademik taqdimot narxi: <b>5 000 so'm</b>\n\n"
+            "Yangi taqdimot yaratish uchun iltimos, hisobingizni to'ldiring.\n"
+            "Pastdagi <b>«💳 Hisobni to'ldirish»</b> tugmasini bosing:"
+        )
+        keyboard = InlineKeyboardMarkup([
+            [InlineKeyboardButton("💳 Hisobni to'ldirish", callback_data="btn_pay_start")]
+        ])
+        target_msg = query.message if query else update.message
+        await target_msg.reply_text(text, parse_mode="HTML", reply_markup=keyboard)
+        return ConversationHandler.END
 
     # Ma'lumotlarni boshlang'ich holatga keltirish
     context.user_data["pres_data"] = {
@@ -474,6 +1026,14 @@ async def handle_fill_auto(update: Update, context: ContextTypes.DEFAULT_TYPE) -
         data["temp_files"].extend(temp_images)
 
         theme = get_theme(data["theme_id"])
+
+        # Balansdan 5 000 so'm yechish
+        admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+        if not (admin_id and str(user_id) == str(admin_id)):
+            database.deduct_balance(user_id, 5000)
+        rem_balance = database.get_balance(user_id)
+        rem_slides = rem_balance // 5000
+
         caption = (
             f"🎉 <b>Taqdimotingiz muvaffaqiyatli tayyorlandi!</b>\n\n"
             f"📌 <b>Mavzu:</b> {data['topic']}\n"
@@ -483,6 +1043,7 @@ async def handle_fill_auto(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             f"📝 <b>Matn:</b> Har slaydda boyitilgan matn (Times New Roman)\n"
             f"👤 <b>Bajardi:</b> {data['author_name']}\n"
             f"🏫 <b>Guruh:</b> {data['group_name']}\n\n"
+            f"💰 <b>Qolgan balansingiz:</b> {rem_balance:,} so'm ({rem_slides} ta taqdimot)\n\n"
             f"<i>Faylni yuklab olib, bemalol tahrirlashingiz yoki namoyish etishingiz mumkin.</i>"
         )
 
@@ -658,6 +1219,14 @@ async def _generate_and_send_manual(update: Update, context: ContextTypes.DEFAUL
         data["temp_files"].extend(temp_images)
 
         theme = get_theme(data["theme_id"])
+
+        # Balansdan 5 000 so'm yechish
+        admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
+        if not (admin_id and str(user_id) == str(admin_id)):
+            database.deduct_balance(user_id, 5000)
+        rem_balance = database.get_balance(user_id)
+        rem_slides = rem_balance // 5000
+
         caption = (
             f"🎉 <b>Taqdimotingiz muvaffaqiyatli tayyorlandi!</b>\n\n"
             f"📌 <b>Mavzu:</b> {data['topic']}\n"
@@ -666,7 +1235,8 @@ async def _generate_and_send_manual(update: Update, context: ContextTypes.DEFAUL
             f"🖼 <b>Tuzilishi:</b> Matnli va yarim-rasmli muvozanatli slaydlar\n"
             f"📝 <b>Matn:</b> Har slaydda boyitilgan matn (Times New Roman)\n"
             f"👤 <b>Bajardi:</b> {data['author_name']}\n"
-            f"🏫 <b>Guruh:</b> {data['group_name']}"
+            f"🏫 <b>Guruh:</b> {data['group_name']}\n\n"
+            f"💰 <b>Qolgan balansingiz:</b> {rem_balance:,} so'm ({rem_slides} ta taqdimot)"
         )
 
         with open(pptx_path, "rb") as doc_file:
@@ -950,7 +1520,8 @@ def get_conversation_handler() -> ConversationHandler:
             CommandHandler("start", cmd_start),
             CallbackQueryHandler(start_creation, pattern="^start_creation$"),
             CallbackQueryHandler(start_creation, pattern="^action_new$"),
-            CallbackQueryHandler(handle_retheme, pattern="^action_retheme$")
+            CallbackQueryHandler(handle_retheme, pattern="^action_retheme$"),
+            MessageHandler(filters.Regex(r"^(📊 Yangi taqdimot yaratish|Yangi taqdimot)$"), start_creation)
         ],
         states={
             STATE_SELECT_THEME: [
@@ -1011,6 +1582,11 @@ def get_conversation_handler() -> ConversationHandler:
         fallbacks=[
             CommandHandler("cancel", handle_cancel),
             CommandHandler("start", cmd_start),
+            MessageHandler(filters.Regex(r"^(📊 Yangi taqdimot yaratish|Yangi taqdimot)$"), start_creation),
+            MessageHandler(filters.Regex(r"^(💰 Balans|Balans)$"), handle_balance_button),
+            MessageHandler(filters.Regex(r"^(💳 Hisobni to'ldirish|💳 To'lov|To'lov)$"), handle_payment_request),
+            MessageHandler(filters.Regex(r"^(📑\s*)?AUDIT\s*\(mustaqil ish\)"), handle_audit_service),
+            MessageHandler(filters.Regex(r"^(🎓\s*)?DIREKTOR\.UZ\s*\(sertifikat\)"), handle_direktor_service),
             CallbackQueryHandler(handle_cancel, pattern="^btn_cancel$")
         ],
         allow_reentry=True,

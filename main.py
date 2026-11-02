@@ -54,10 +54,29 @@ from telegram import Update
 from telegram.ext import (
     ApplicationBuilder,
     CommandHandler,
-    ContextTypes
+    CallbackQueryHandler,
+    MessageHandler,
+    ContextTypes,
+    filters
 )
 
-from handlers import get_conversation_handler, cmd_start
+import database
+from handlers import (
+    get_conversation_handler,
+    cmd_start,
+    handle_balance_button,
+    handle_payment_request,
+    handle_photo_receipt,
+    handle_payment_callback,
+    handle_audit_service,
+    handle_direktor_service,
+    handle_order_service_callback,
+    handle_admin_text_input,
+    cmd_myid,
+    cmd_setadmin,
+    cmd_admin,
+    cmd_addbalance
+)
 
 # Loglarni sozlash: Ham konsolga, ham bot.log fayliga yozish
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -155,6 +174,11 @@ async def post_init_setup(app) -> None:
 
 def run_bot() -> None:
     """Bot ilovasini qurish va pollingni ishga tushirish."""
+    import asyncio
+    # Har doim yangi va toza asyncio event loop o'rnatish (Event loop is closed xatosini oldini olish)
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     load_dotenv()
     token = os.getenv("BOT_TOKEN")
 
@@ -185,9 +209,39 @@ def run_bot() -> None:
         .build()
     )
 
+    # Ma'lumotlar bazasini ishga tushirish
+    database.init_db()
+
     # Handlerlarni ro'yxatdan o'tkazish
     application.add_handler(get_conversation_handler())
+    application.add_handler(CommandHandler("start", cmd_start))
     application.add_handler(CommandHandler("help", cmd_help))
+    application.add_handler(CommandHandler("myid", cmd_myid))
+    application.add_handler(CommandHandler("id", cmd_myid))
+    application.add_handler(CommandHandler("admin", cmd_admin))
+    application.add_handler(CommandHandler("setadmin", cmd_setadmin))
+    application.add_handler(CommandHandler("addbalance", cmd_addbalance))
+    application.add_handler(CommandHandler("pay", handle_payment_request))
+
+    # Pastki doimiy reply tugmalar
+    application.add_handler(MessageHandler(filters.Regex(r"^(💰 Balans|Balans)$"), handle_balance_button))
+    application.add_handler(MessageHandler(filters.Regex(r"^(💳 Hisobni to'ldirish|💳 To'lov|To'lov)$"), handle_payment_request))
+    application.add_handler(MessageHandler(filters.Regex(r"^(📑\s*)?AUDIT\s*\(mustaqil ish\)"), handle_audit_service))
+    application.add_handler(MessageHandler(filters.Regex(r"^(🎓\s*)?DIREKTOR\.UZ\s*\(sertifikat\)"), handle_direktor_service))
+
+    # Inline tugmalar
+    application.add_handler(CallbackQueryHandler(handle_balance_button, pattern=r"^btn_show_balance$"))
+    application.add_handler(CallbackQueryHandler(handle_payment_request, pattern=r"^btn_pay_start$"))
+    application.add_handler(CallbackQueryHandler(handle_order_service_callback, pattern=r"^order_service_(audit|direktor)$"))
+
+    # Admin tasdiqlash / rad etish / boshqa summa callback handler
+    application.add_handler(CallbackQueryHandler(handle_payment_callback, pattern=r"^pay_(approve|reject|custom)_"))
+
+    # To'lov cheki (rasm) qabul qilish
+    application.add_handler(MessageHandler(filters.PHOTO, handle_photo_receipt))
+
+    # Admin qo'lda summa kiritishi (masalan: 30000, 50000 va h.k.)
+    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_admin_text_input))
 
     # Global xatoliklar handlerini ulash
     application.add_error_handler(error_handler)
@@ -195,9 +249,10 @@ def run_bot() -> None:
     # Polling rejimida ishga tushirish (24/7 rejim)
     logger.info("Bot muvaffaqiyatli ishga tushdi va xabarlarni qabul qilmoqda!")
     application.run_polling(
-        drop_pending_updates=True,
+        drop_pending_updates=False,
         allowed_updates=Update.ALL_TYPES,
-        poll_interval=1.0
+        poll_interval=1.0,
+        close_loop=False
     )
 
 
