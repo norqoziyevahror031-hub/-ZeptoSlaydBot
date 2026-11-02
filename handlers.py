@@ -372,13 +372,15 @@ async def handle_order_service_callback(update: Update, context: ContextTypes.DE
     admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
     if admin_id:
         try:
+            u_name = html.escape(user.full_name or "Foydalanuvchi")
+            u_tag = f"@{user.username}" if user.username else "yo'q"
             admin_msg = (
                 f"🚨 <b>YANGI XIZMAT BUYURTMASI KELDI!</b>\n\n"
                 f"📌 <b>Xizmat:</b> {service_name}\n"
                 f"💵 <b>Summa:</b> {price:,} so'm (balansdan yechildi)\n\n"
-                f"👤 <b>Mijoz:</b> {user.full_name}\n"
+                f"👤 <b>Mijoz:</b> {u_name}\n"
                 f"🆔 <b>ID:</b> <code>{user.id}</code>\n"
-                f"Username: @{user.username or 'yo\'q'}\n"
+                f"Username: {u_tag}\n"
             )
             await context.bot.send_message(
                 chat_id=int(admin_id),
@@ -413,11 +415,13 @@ async def handle_photo_receipt(update: Update, context: ContextTypes.DEFAULT_TYP
     admin_id = os.getenv("ADMIN_ID") or database.get_setting("admin_id")
     if admin_id:
         try:
+            u_name = html.escape(user.full_name or "Foydalanuvchi")
+            u_tag = f"@{user.username}" if user.username else "yo'q"
             admin_text = (
                 f"🔔 <b>YANGI TO'LOV CHEKI KELDI!</b>\n\n"
-                f"👤 <b>Foydalanuvchi:</b> {user.full_name}\n"
+                f"👤 <b>Foydalanuvchi:</b> {u_name}\n"
                 f"🆔 <b>ID:</b> <code>{user.id}</code>\n"
-                f"Username: @{user.username or 'yo\'q'}\n"
+                f"Username: {u_tag}\n"
                 f"To'lov kodi: #{payment_id}\n\n"
                 f"Tasdiqlash uchun summani tanlang:"
             )
